@@ -24,7 +24,8 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <projectConfigurable id="com.hysea.cryptotool.AESEncryptionConfigurable" displayName="AES Encryption" groupId="tools" instance="com.hysea.cryptotool.AESEncryptionConfigurable"/>
+        <projectConfigurable id="com.hysea.cryptotool.AESEncryptionConfigurable" displayName="AES Encryption"
+                             groupId="tools" instance="com.hysea.cryptotool.AESEncryptionConfigurable"/>
     </extensions>
 
 
@@ -40,6 +41,19 @@
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
 
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+        </action>
+
+        <action id="com.hysea.cryptotool.ConfuseAction" class="com.hysea.cryptotool.ConfuseAction" text="ConfuseAction"
+                description="ConfuseAction">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift C"/>
+        </action>
+
+        <action id="com.hysea.cryptotool.ClarifyAction" class="com.hysea.cryptotool.ClarifyAction" text="ClarifyAction"
+                description="ClarifyAction">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift X"/>
         </action>
     </actions>
 </idea-plugin>

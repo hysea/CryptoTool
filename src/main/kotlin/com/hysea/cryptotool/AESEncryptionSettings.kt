@@ -15,6 +15,7 @@ class AESEncryptionSettings : PersistentStateComponent<AESEncryptionSettings.Sta
 
     class State {
         var aesKey: String? = null
+        var seed:String? = null
     }
 
     override fun getState(): State {
